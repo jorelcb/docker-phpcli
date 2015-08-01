@@ -1,8 +1,9 @@
 FROM debian:jessie
 
-MAINTAINER "Dylan Lindgren" <dylan.lindgren@gmail.com>
+MAINTAINER "Jorge Corredor" <jorel.c@gmail.com>
 
-# Install PHP-CLI using APT
+WORKDIR /tmp
+
 RUN apt-get update -y && \
     apt-get install php5-cli -y
 
