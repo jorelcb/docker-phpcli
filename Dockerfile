@@ -2,11 +2,9 @@ FROM debian:jessie
 
 MAINTAINER "Jorge Corredor" <jorel.c@gmail.com>
 
-WORKDIR /tmp
+# PHP-CLI PHP scripting console support
+RUN apt-get update && apt-get install -y php5-cli 
 
-RUN apt-get update -y && \
-    apt-get install php5-cli -y
-
-# Container entry point is PHP, default command is --help
 ENTRYPOINT ["php"]
-CMD ["--help"]
+CMD ["--version"]
+
